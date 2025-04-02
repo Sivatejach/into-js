@@ -17,6 +17,5 @@ function isAnagram(str1, str2) {
 
 }
 
-console.log(isAnagram("listen", "silent")); // true
 
-console.log(isAnagram("hello", "world")); // false
+module.exports = isAnagram;
