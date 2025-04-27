@@ -33,7 +33,7 @@ function calculateTotalSpentByCategory(transactions) {
         result.push({ category: category, totalSpent: 
             
             
-            [category] });
+            categoryMap[category] });
     }
     
    
