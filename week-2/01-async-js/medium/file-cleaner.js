@@ -12,13 +12,12 @@ const filePath = './sample.txt'; // Simple relative path
 
 
 function cleanFile(filePath) {
-    fs.readFile(filePath, 'utf8', function (err, data) {
-
+    fs.readFile(filePath, 'utf8', function (err, data) { //err is keyword if dont write function
         const cleanedData=data.replace(/\s+/g, ' ').trim(); // Remove extra spaces  and trim leading/trailing spaces 
         fs.writeFile(filePath, cleanedData, 'utf8', () => {
             console.log('File cleaned successfully');
-        }
-        );
+        });
     });
 }
+
 cleanFile(filePath);
