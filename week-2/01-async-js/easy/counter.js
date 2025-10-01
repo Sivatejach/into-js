@@ -12,7 +12,7 @@ function counter(){
         if (count > 10) {
             clearInterval(id);
         }
-    }, 1000);
+    }, 2000);
 }
 
 counter();
