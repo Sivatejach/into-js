@@ -10,8 +10,12 @@ function sumofSquares(a, b){
     return square(a) + square(b);
 }
 
-console.log(sumofSquares(2, 3));
+function sumofCube(a,b){
+    return cube(a) + cube(b);
+}
 
+console.log(sumofSquares(2, 3));
+console.log(sumofCube(2, 3));
 
 //with using callback
 
@@ -46,3 +50,18 @@ function sumofSomethingusingCallback(a, b, callback){
 
 console.log(sumofSomethingusingCallback(2, 3, (n)=>n*n));
 console.log(sumofSomethingusingCallback(2, 3, (n)=>n*n*n));
+
+
+
+
+
+function greet(callback, name) {  //callback='Teja', name=afterGreeting
+    console.log("Hello, " + callback);
+    name();
+}
+
+function afterGreeting() {
+    console.log("This runs after greeting!");
+}
+
+greet("Teja", afterGreeting);
