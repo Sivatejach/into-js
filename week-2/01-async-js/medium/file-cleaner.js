@@ -6,16 +6,15 @@
 // After the program runs, the output should be
 // hello world my name is raman
 
-import fs from 'fs'
-const filePath = './sample.txt'; // Simple relative path
 
-
+import fs from 'fs';
+const filePath = './sample.txt';
 
 function cleanFile(filePath) {
-    fs.readFile(filePath, 'utf8', function (err, data) {
-        const cleanedData = data.replace(/\s+/g, ' ').trim(); // Remove extra spaces  and trim leading/trailing spaces
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        const cleanedData = data.replace(/\s+/g, ' ').trim();
         fs.writeFile(filePath, cleanedData, 'utf8', () => {
-            console.log('File cleaned successfully');
+           console.log('File cleaned successfully.');
         });
     });
 }
